@@ -1,5 +1,5 @@
 // controllers/productController.js
-const db = require('../db'); // Use your database connection module
+const db = require('../db.cjs'); // Use your database connection module
 
 // Controller function to get a list of products
 async function getProducts(req, res) {
