@@ -1,4 +1,4 @@
-// controllers/productController.js
+//server /controllers/productController.js
 const db = require('../db.cjs'); // Use your database connection module
 
 // Controller function to get a list of products

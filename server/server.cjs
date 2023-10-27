@@ -1,3 +1,4 @@
+//server/server.cjs
 const express = require('express');
 const app = express();
 const db = require('./db.cjs'); // Import your database connection module

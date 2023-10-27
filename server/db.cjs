@@ -1,6 +1,7 @@
+//server/db.cjs
 const pgPromise = require('pg-promise');
 const db = pgPromise()({
-  connectionString: 'postgres://postgres@localhost:5432/postgres',
+  connectionString: 'postgres://postgres:fares1234@localhost:5432/postgres',
 });
 
 db.connect()
