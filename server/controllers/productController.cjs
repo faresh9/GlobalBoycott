@@ -12,6 +12,22 @@ async function getProducts(req, res) {
   }
 }
 
+async function createProduct(req, res) {
+  const { name, description, price } = req.body;
+
+  try {
+    const newProduct = await db.one(
+      'INSERT INTO products (name, description, price) VALUES ($1, $2, $3) RETURNING *',
+      [name, description, price]
+    );
+    res.status(201).json(newProduct);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'An error occurred while creating a product.' });
+  }
+}
+
 module.exports = {
   getProducts,
+  createProduct,
 };
